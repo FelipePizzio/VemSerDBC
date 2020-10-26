@@ -1,0 +1,36 @@
+Class documentation
+<---- javadoc command: ---->
+/usr/lib/jvm/java-11-openjdk-amd64/bin/javadoc
+-author
+-version
+-nodeprecated
+-package
+-Xdoclint:none
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+11
+-classpath
+/usr/share/bluej/bluejcore.jar:/usr/share/bluej/junit-4.11.jar:/usr/share/bluej/hamcrest-core-1.3.jar:/usr/share/bluej/lang-stride.jar:/usr/share/java/javafx-base-11.jar:/usr/share/java/javafx-controls-11.jar:/usr/share/java/javafx-fxml-11.jar:/usr/share/java/javafx-graphics-11.jar:/usr/share/java/javafx-media-11.jar:/usr/share/java/javafx-properties-11.jar:/usr/share/java/javafx-swing-11.jar:/usr/share/java/javafx-web-11.jar:/home/vemser/Área de Trabalho/fp-vemser/Modulo 1/Lotr
+-d
+/home/vemser/Área de Trabalho/fp-vemser/Modulo 1/Lotr/doc
+-encoding
+UTF-8
+-charset
+UTF-8
+/home/vemser/Área de Trabalho/fp-vemser/Modulo 1/Lotr/Dwarf.java
+<---- end of javadoc command ---->
+Loading source file /home/vemser/Área de Trabalho/fp-vemser/Modulo 1/Lotr/Dwarf.java...
+Constructing Javadoc information...
+Standard Doclet version 11.0.4
+Building tree for all the packages and classes...
+Generating /home/vemser/Área de Trabalho/fp-vemser/Modulo 1/Lotr/doc/Dwarf.html...
+Generating /home/vemser/Área de Trabalho/fp-vemser/Modulo 1/Lotr/doc/package-summary.html...
+Generating /home/vemser/Área de Trabalho/fp-vemser/Modulo 1/Lotr/doc/constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating /home/vemser/Área de Trabalho/fp-vemser/Modulo 1/Lotr/doc/allclasses.html...
+Generating /home/vemser/Área de Trabalho/fp-vemser/Modulo 1/Lotr/doc/allclasses.html...
+Generating /home/vemser/Área de Trabalho/fp-vemser/Modulo 1/Lotr/doc/index.html...
