@@ -1,0 +1,46 @@
+body {
+    margin: 100px;
+    width: 1000px;
+}
+.size-grecia{
+    height: 50px;
+}
+.size-jap,
+.size-fin,
+.size-alem,
+.size-lib{
+    height: 150px;
+}
+.size-lib-plus{
+    height: 350px;
+}
+.img-lib{
+    background: url(../libano.jpg) no-repeat center / cover;
+}
+
+.jap {
+    border: 1px solid #000;
+}
+
+.sol {
+    border-radius: 50%;
+}
+
+.dark-blue{
+    background: #1f0982;
+}
+.blue {
+    background: blue;
+}
+
+.black {
+    background: black;
+}
+
+.red {
+    background: red;
+}
+
+.yellow {
+    background: yellow;
+}
