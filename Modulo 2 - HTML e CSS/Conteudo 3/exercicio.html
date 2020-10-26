@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UFT-8">
+        <title>CSS!</title>
+        <style>
+            html, body {
+                margin:0;
+                padding: 0;
+                background-color: lightsteelblue;
+            }
+            p:nth-child(1){
+                color:red;
+            }
+            p:nth-child(1) span{
+                color:purple;
+            }
+            p:nth-child(2){
+                color:green;
+            }
+            p:nth-child(2) span{
+                color:yellow;
+            }
+            p:nth-child(2) span span{
+                color:orange;
+            }
+            p:nth-child(3){
+                color:blue;
+            }
+            p:nth-child(3) a{
+                color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <p class="red">
+                Em vermelho.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, voluptate fugiat molestiae eum quia et id aperiam 
+                distinctio laboriosam harum perspiciatis sapiente sequi 
+                <span>accusantium temporibus doloribus dolorem accusamus adipisci! Facilis.(roxo)</span>
+            </p>
+            <p class="green">
+                Em verde.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, voluptate fugiat molestiae eum quia et id aperiam 
+                <span>distinctio laboriosam harum perspiciatis sapiente sequi(amarelo)
+                <span>accusantium temporibus doloribus dolorem accusamus adipisci! Facilis.(laranja)</span></span>
+            </p>
+            <p class="blue">
+                Em azul.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, voluptate fugiat molestiae eum quia et id aperiam 
+                distinctio laboriosam harum perspiciatis sapiente sequi 
+                <a href="#">accusantium temporibus doloribus dolorem accusamus adipisci! Facilis.(preto)</a>
+            </p>
+        </article>
+    </body>
+</html>

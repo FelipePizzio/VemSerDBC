@@ -1,0 +1,11 @@
+/*GRID*/
+
+.clearfix::before,
+.clearfix::after,
+.row::before,
+.row::after
+{
+    content: "";
+    display: table;
+    clear: both;
+}

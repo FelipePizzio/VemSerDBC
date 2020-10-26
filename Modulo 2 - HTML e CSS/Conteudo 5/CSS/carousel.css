@@ -1,0 +1,18 @@
+/*CAROUSEL*/
+
+.carousel-item{
+    height: calc(100vh - 56px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.carousel-item-1{
+    background-image: url(../IMAGENS/Kitten-1.jpg);
+}
+.carousel-item-2{
+    background-image: url(../IMAGENS/Kitten-2.jpg);
+}
+.carousel-item-3{
+    background-image: url(../IMAGENS/Kitten-3.jpg);
+}

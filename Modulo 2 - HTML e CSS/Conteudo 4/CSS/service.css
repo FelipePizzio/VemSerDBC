@@ -1,0 +1,14 @@
+/*SERVICE*/
+
+.main-service article{
+    font-size: 20px;
+    text-align: center;
+}
+
+.main-service{
+    padding-top: 10px;
+}
+
+.main-service .row:last-child{
+    text-align: center;
+}

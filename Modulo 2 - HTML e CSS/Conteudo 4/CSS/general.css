@@ -1,0 +1,6 @@
+/* General */
+
+section:not(.main-banner) {
+    min-height: calc(100vh - 50px - 130px - 40px);
+}
+

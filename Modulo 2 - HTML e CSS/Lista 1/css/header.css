@@ -1,0 +1,11 @@
+.header .nav-link{
+    font-size: 18px;
+}
+.logo{
+    width: 50px;
+    height: auto;
+}
+
+.nav-pills .nav-link.active{
+    background-color: #e88f23;
+}
