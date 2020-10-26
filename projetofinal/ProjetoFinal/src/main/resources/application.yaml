@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      url: mongodb://mongoadmin:secret@localhost:27017
+      database: projetoFinal
+---
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+file:
+  upload-dir: home/vemser/Documentos/Upload
+
