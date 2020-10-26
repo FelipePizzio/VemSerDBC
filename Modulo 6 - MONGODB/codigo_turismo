@@ -1,0 +1,31 @@
+db.createCollection("turismo")
+
+/*INSERT*/
+db.turismo.insert( { nome: "Pelotas", fundação: "19/06/1758", kmpoa: 261, pontos_turisticos: [ { nome: "The Way", descricao: "festa open bar lgbt", valor_entrada: 40, horario: "sexta e sabado, abre as 22h" }, { nome: "Marcelão Lanches Artesanais", descricao: "melhor boteco da cidade", valor_entrada: 0, horario: "segunda a sabado, abre as 15h" } ] } )
+
+db.turismo.insert( { nome: "Las Vegas", fundação: "15/05/1905", kmpoa: 9931, pontos_turisticos: [ { nome: "Las Veagas Strip", descricao: "parte da avenida Las Vegas Boulevard. A Las Vegas Boulevard, juntamente com a região de Old Town Las Vegas, concentra os primeiros hotéis e cassinos da cidade, bem como as principais atrações turísticas", valor_entrada: 0, horario: "sempre aberto" }, { nome: "Red Rock Canyon", descricao: "Esta lindíssima área de conservação fica ao lado de Las Vegas, no Condado de Clark, Nevada. Você poderá fazer um tour com guia local, ou simplesmente seguir de carro pela estrada no meio do deserto Mojave e suas montanhas vermelhas", valor_entrada: 0, horario:"sempre aberto" }, { nome: "Madame Tussauds", descricao: "O museu de cera mais conhecido do mundo é também um dos mais procurados pontos turísticos de Las Vegas. O Madame Tussauds de Las Vegas foi o primeiro a ser inaugurado nos Estados Unidos, em 1999", valor_entrada: 37, horario: "9am - 5pm" } ] } )
+
+db.turismo.insert( { nome: "Capadócia na Turquia", fundação: "", kmpoa: 11772, pontos_turisticos: [ { nome: "Formação dos tufos calcários", descricao: "É este antigo vulcão, juntamente com outro vulcão extinto, o Hasan Dağı, que há 50 milhões de anos começou depositar o que hoje é chamado de tufo calcário, cobrindo a região com espessas e diferentes camadas de lava – que ao esfriar formou uma mistura de basalto, cinzas e areia – e que foram trabalhadas pelo tempo (vento e chuva, por exemplo) e por movimentos tectônicos, formando elevações e depressões. Criando assim, por séculos, a forma original da paisagem.", valor_entrada: 0, horario: "sempre aberto" }, { nome: "Parque Nacional de Göreme", descricao: "Devido suas formações geológicas únicas, resultado de fenômenos vulcânicos e da erosão. E claro, seu rico patrimônio histórico e cultural, como as cidades subterrâneas e inúmeras habitações e igrejas escavadas em rocha (muitas com admiráveis afrescos), em 1985, o Parque Nacional de Göreme, uma das áreas mais famosas da região, com 9576 ha, foi declarada Patrimônio Mundial pela UNESCO.", valor_entrada: 0, horario: "sempre aberto" } ] } )
+
+db.turismo.insert( { nome: "Moscou", fundação: 1147, kmpoa: 12657, pontos_turisticos: [ { nome: "Catedral de São Basílio", descricao: "Construída sob a ordem de Ivã IV da Rússia, para comemorar a captura de Kazan e Astracã, marca o centro geométrico da cidade e o centro do seu crescimento", valor_entrada: 0, horario: "sempre aberta?" }, { nome: "Kremlin", descricao: "Esse é o ponto turístico mais icônico do país. Antigamente, o Kremlin e a Praça Vermelha, que ficam localizados lado a lado, foram o centro dos eventos históricos na Rússia, sendo o Kremlin a sede do governo.", valor_entrada: 700, horario: "sempre aberto" } ] } )
+
+db.turismo.insert( { nome: "Potosí", fundação: "01/04/1545", kmpoa: 1868, pontos_turisticos: [ { nome: "Salar de Uyuni", descricao: "é o maior e mais alto deserto de sal do mundo, com 10.582 quilômetros quadrados e a 3.656 metros acima do nível médio do mar", valor_entrada: 0, horario: "sempre aberto" }, { nome: "Casa de la Moneda", descricao: "Este é um importante museu boliviano, situado ao lado da catedral de Potosi. Aí conta-se a história de como a absurda quantidade de prata era processada e transformada em moedas", valor_entrada: 0, horario: "sempre aberto" } ] } )
+
+db.turismo.insert( { nome: "Chefchaouen, a cidade azul do Marrocos", fundação: 1471, kmpoa: 8303, pontos_turisticos: [ { nome: "Caminhar pela Medina", descricao: "A Medina de Chefchaouen se difere das outras do país por ter praticamente todas as casas e ruas tingidas de azul", valor_entrada: 0, horario: "sempre aberto" }, { nome: "Comércio de maconha e visita a plantações", descricao: "Um dos maiores centros fica justamente em Chefchaouen. Para quem fuma ou quer experimentar, a cidade é o ponto mais seguro no país para tal, sendo conhecida como a Amsterdam africana", valor_entrada: 0, horario: "sempre aberto" } ] } )
+
+/*UPDATE*/
+db.turismo.update( { nome: "Pelotas" }, { $push: { pontos_turisticos: { nome: "Bar do Zé", descricao: "o bar de todos os grupos", valor_entrada: 0, horario: "todos os dias, abre as 21h" } } } )
+
+db.turismo.update( { nome: "Capadócia na Turquia" }, { $unset: { fundação: "" } } )
+
+db.turismo.update( { nome: "Moscou", "pontos_turisticos.nome" : "Catedral de São Basílio" }, { $set: { "pontos_turisticos.$.horario" : "sempre fechada" } } )
+
+/*REMOVE*/
+
+db.turismo.remove( { nome: "Potosí" } )
+
+/*SEARCH*/
+
+db.turismo.find( { $and:[ { "pontos_turisticos.valor_entrada" : { $gte : 0 } }, { "kmpoa" : { $gte : 0 } } ] } ).pretty()
+
+

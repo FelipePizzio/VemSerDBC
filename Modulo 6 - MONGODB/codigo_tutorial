@@ -1,0 +1,5 @@
+custArray = [{ nome : "Felipe", idade : 27 }, { nome : "Teste", "uf" : "RS" }]
+db.customers.insert(custArray)
+db.customers.find({uf: "RS"}).pretty()
+db.customers.find({nome: { $regex: /a/ }}).pretty()	//regex -> retorna quem tiver a letra no nome
+db.customers.find({idade: {$gte: 18}}).pretty()
