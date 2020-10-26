@@ -1,0 +1,54 @@
+*USUARIOS*
+{ 
+    "nome" : "nome_usuario", 
+    "email" : "email@exemplo.com", 
+    "senha" : "senha123!", 
+    "_id" : ObjectId("")
+}
+
+*CANDIDATOS*
+{ 
+    "nome" : "nome_candidato", 
+    "dados_pessoais" : {
+        "cpf" : "000.000.000-00", 
+        "data_nascimento" : "dd/MM/yyyy", 
+        "endereço" : {
+            "estado" : "sigla_estado", 
+            "cidade" : "nome_cidade", 
+            "bairro" : "nome_bairro", 
+            "rua" : "nome_rua", 
+            "numero" : "x",
+	    "complemento" : "y"
+        }
+    }, 
+    "dados_escolares" : [
+        {
+            "nome" : "nome_faculdade", 
+            "ano_graduação" : "yyyy"
+        }
+    ], 
+    "experiências" : [
+        {
+            "nome" : "nome_empresa", 
+            "período" : "x anos ou y meses", 
+            "cargo" : "nome_cargo"
+        }
+    ], 
+    "link_curriculo" : ".xpto", 
+    "código_vaga" : "código_vaga", 
+    "_id" : ObjectId("")
+}
+
+*VAGAS*
+{ 
+    "título" : "título_vaga", 
+    "data_abertura" : "dd/MM/yyyy - 00:00:00", 
+    "código_vaga" : "código_vaga", 
+    "url" : "https://...", 
+    "cidade" : "nome_cidade", 
+    "estado" : "nome_estado", 
+    "código_filial" : "código_filial", 
+    "nome_filial" : "nome_filial", 
+    "descrição_vaga" : "texto", 
+    "_id" : ObjectId("5e5a76fa8b772b501703d865")
+}
