@@ -1,0 +1,8 @@
+.lista ul{
+    padding: 0;
+}
+
+.lista ul a{
+    display: block;
+    margin: 30px 0;
+}

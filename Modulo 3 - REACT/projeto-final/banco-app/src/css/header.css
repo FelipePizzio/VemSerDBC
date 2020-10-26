@@ -1,0 +1,59 @@
+/*HEADER*/
+.main-header{
+    width: 100%;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    background: #282c34;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+.main-header ul{
+    float: right;
+}
+.main-header ul a{
+    display: block;
+    padding: 15px;
+}
+.main-header li{
+    float: left;
+}
+@media (max-width: 640px){
+    .main-header ul,
+    .main-header li {
+        float: none;
+        clear: both;
+    }
+}
+#mobile-menu,
+.mobile-menu{
+    display: none;
+}
+
+@media (max-width: 640px){
+    .main-header ul{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+        width: 45px;
+        height: 45px;
+        padding: 10px;
+        margin-top: 3px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background: #282c34;
+        float: right;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+    .mobile-menu span{
+        display: block;
+        height: 3px;
+        border-radius: 4px;
+        background: #999;
+        margin: 4px 0;
+    }
+    #mobile-menu:checked + ul{
+        display: block;
+    }
+}

@@ -1,0 +1,15 @@
+/*BOX*/
+
+.box{
+    min-width: 100vw;
+    min-height: 100vh;
+    padding-top: 120px;
+    background: #282c34;
+    text-align: center;
+}
+
+@media (max-width: 639px){
+    .box{
+        margin-bottom: 5px;
+    }
+}
