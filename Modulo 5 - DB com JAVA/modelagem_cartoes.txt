@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: https://ondras.zarovi.cz/sql/demo/?keyword=default -->
+<sql>
+<datatypes db="mysql">
+	<group label="Numeric" color="rgb(238,238,170)">
+		<type label="Integer" length="0" sql="INTEGER" re="INT" quote=""/>
+		<type label="Decimal" length="1" sql="DECIMAL" re="DEC" quote=""/>
+		<type label="Single precision" length="0" sql="FLOAT" quote=""/>
+		<type label="Double precision" length="0" sql="DOUBLE" re="DOUBLE" quote=""/>
+	</group>
+
+	<group label="Character" color="rgb(255,200,200)">
+		<type label="Char" length="1" sql="CHAR" quote="'"/>
+		<type label="Varchar" length="1" sql="VARCHAR" quote="'"/>
+		<type label="Text" length="0" sql="MEDIUMTEXT" re="TEXT" quote="'"/>
+		<type label="Binary" length="1" sql="BINARY" quote="'"/>
+		<type label="Varbinary" length="1" sql="VARBINARY" quote="'"/>
+		<type label="BLOB" length="0" sql="BLOB" re="BLOB" quote="'"/>
+	</group>
+
+	<group label="Date &amp; Time" color="rgb(200,255,200)">
+		<type label="Date" length="0" sql="DATE" quote="'"/>
+		<type label="Time" length="0" sql="TIME" quote="'"/>
+		<type label="Datetime" length="0" sql="DATETIME" quote="'"/>
+		<type label="Year" length="0" sql="YEAR" quote=""/>
+		<type label="Timestamp" length="0" sql="TIMESTAMP" quote="'"/>
+	</group>
+
+	<group label="Miscellaneous" color="rgb(200,200,255)">
+		<type label="ENUM" length="1" sql="ENUM" quote=""/>
+		<type label="SET" length="1" sql="SET" quote=""/>
+		<type label="Bit" length="0" sql="bit" quote=""/>
+	</group>
+</datatypes><table x="301" y="6" name="LOJAS">
+<row name="ID" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="NOME" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>ID</part>
+</key>
+</table>
+<table x="10" y="132" name="CREDENCIADOR">
+<row name="ID" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="NOME" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>ID</part>
+</key>
+</table>
+<table x="12" y="1" name="LOJA_X_CREDENCIADOR">
+<row name="ID_LOJAS" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="LOJAS" row="ID" />
+</row>
+<row name="ID_CREDENCIADOR" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="CREDENCIADOR" row="ID" />
+</row>
+<row name="TAXA" null="0" autoincrement="0">
+<datatype>DECIMAL</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>ID_LOJAS</part>
+<part>ID_CREDENCIADOR</part>
+</key>
+</table>
+<table x="15" y="250" name="BANDEIRA">
+<row name="ID" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="NOME" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+</row>
+<row name="TAXA" null="0" autoincrement="0">
+<datatype>DECIMAL</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>ID</part>
+</key>
+</table>
+<table x="19" y="380" name="EMISSOR">
+<row name="ID" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="NOME" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+</row>
+<row name="TAXA" null="0" autoincrement="0">
+<datatype>DECIMAL</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>ID</part>
+</key>
+</table>
+<table x="21" y="501" name="CLIENTE">
+<row name="ID" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="NOME" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>ID</part>
+</key>
+</table>
+<table x="258" y="121" name="CARTÃO">
+<row name="ID" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="CHIP" null="0" autoincrement="0">
+<datatype>BINARY</datatype>
+</row>
+<row name="ID_CLIENTE" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="CLIENTE" row="ID" />
+</row>
+<row name="ID_BANDEIRA" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="BANDEIRA" row="ID" />
+</row>
+<row name="ID_EMISSOR" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="EMISSOR" row="ID" />
+</row>
+<row name="VENCIMENTO" null="0" autoincrement="0">
+<datatype>DATE</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>ID</part>
+</key>
+</table>
+<table x="254" y="351" name="LANÇAMENTO">
+<row name="ID" null="0" autoincrement="1">
+<datatype>INTEGER</datatype>
+</row>
+<row name="ID_CARTÃO" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="CARTÃO" row="ID" />
+</row>
+<row name="ID_LOJAS" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="LOJAS" row="ID" />
+</row>
+<row name="ID_EMISSOR" null="0" autoincrement="0">
+<datatype>INTEGER</datatype>
+<relation table="EMISSOR" row="ID" />
+</row>
+<row name="DESCRIÇÃO" null="0" autoincrement="0">
+<datatype>MEDIUMTEXT(300)</datatype>
+</row>
+<row name="VALOR" null="0" autoincrement="0">
+<datatype>DECIMAL</datatype>
+</row>
+<row name="DATA_COMPRA" null="0" autoincrement="0">
+<datatype>DATE</datatype>
+</row>
+<key type="PRIMARY" name="">
+<part>ID</part>
+</key>
+</table>
+</sql>
