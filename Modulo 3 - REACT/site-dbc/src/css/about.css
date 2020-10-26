@@ -1,0 +1,26 @@
+/*PROFILE*/
+
+.main-about p{
+    font-size: 22px;
+}
+
+.main-about .row {
+    margin-bottom: 30px;
+}
+
+.main-about img{
+    width: 150px;
+    margin: 0 15px 15px 0;
+    float: left;
+}
+
+.main-about .row:nth-child(2n) img {
+    margin: 0 0 15px 15px;
+    float: right;
+}
+
+@media (max-width: 639px){
+    .main-about p{
+        font-size: 18px;
+    }
+}

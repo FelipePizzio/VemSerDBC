@@ -1,0 +1,18 @@
+/*FOOTER*/
+
+.main-footer{
+    padding: 20px 0;
+    margin-top: 40px;
+    background: #929292;
+    text-align: center;
+}
+.main-footer li,
+.main-footer a {
+    display: inline-block;
+}
+.main-footer a{
+    padding: 10px 20px;
+}
+.main-footer p{
+    margin: 30px 0 0;
+}

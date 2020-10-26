@@ -1,0 +1,30 @@
+/*CONTACT*/
+
+.main-contact input[type="text"],
+.main-contact textarea{
+    margin-bottom: 5px;
+    width: 98%;
+}
+
+.main-contact textarea{
+    height: 200px;
+}
+.main-contact input[type="submit"]{
+    float: right;
+}
+
+.main-contact iframe{
+    width:100%; 
+    height:510px;
+    border: none;
+}
+
+.main-contact + footer{
+    margin-top: 0;
+}
+
+@media (max-width: 639px){
+    form{
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,46 @@
+/*BANNER*/
+
+.main-banner{
+    display: table;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: url("../img/creative.jpg") no-repeat center / cover;
+    color: #fff;
+}
+.main-banner::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.6;
+    background: #007aff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #007aff 0%, #39b54a 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #007aff 0%,#39b54a 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #007aff 0%,#39b54a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
+}
+.main-banner article{
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.main-banner h1{
+    margin: 0 0 20px;
+    font-size: 60px;
+    line-height: 70px;
+}
+.main-banner p{
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 22px;
+    line-height: 30px;
+}
