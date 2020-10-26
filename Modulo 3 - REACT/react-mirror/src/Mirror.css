@@ -1,0 +1,41 @@
+@import './css/reset.css';
+@import './css/grid.css';
+@import './css/button.css';
+@import './css/header.css';
+
+.main-info,
+.side-info{
+  margin-top: 30px;
+}
+.main-info img {
+  width: 100%;
+}
+.side-info {
+  font-size: 40px;
+  line-height: 40px;
+}
+.side-info span {
+  margin-bottom: 10px;
+  display: flex;
+}
+.nota {
+  width: 100px;
+}
+.alerta {
+  line-height: 45px;
+  font-size: 45px;
+}
+.vermelho{
+  color: red;
+}
+.verde{
+  color: green;
+}
+.fade-in {
+  animation: fadein 1s linear forwards;
+}
+.fade-out {
+  animation: fadeout 1s linear forwards;
+}
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; visibility: visible; } }
+@keyframes fadeout { from { opacity: 1; } to { opacity: 0; visibility: hidden; } }
