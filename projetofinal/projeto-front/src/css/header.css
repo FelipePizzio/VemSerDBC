@@ -1,0 +1,92 @@
+/* Header */
+
+.main-header {
+    width: 100%;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    background: #FBFAF8;
+    margin-bottom: 6px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.logo-dbc {
+    display: block;
+    width: 115px;
+    float: left;
+    margin: 8px auto;
+    padding-top: 6px;
+}
+
+.logo-dbc img {
+    width: 100%;
+}
+
+.main-header ul {
+    float: right;
+    list-style: none;
+    
+}
+
+.main-header li {
+    float: left;
+}
+
+.main-header ul a {
+    color: #007AFF;
+    display: block;
+    padding: 8px 14px;
+    text-decoration: none;
+}
+
+.main-header ul a:hover {
+    text-decoration: underline;
+}
+
+.mobile-menu,
+#mobile-menu {
+    display: none;
+}
+
+@media (max-width: 820px) {
+    .main-header li,
+    .main-header ul {
+        float: none;
+        clear: both;
+    }
+
+    .mobile-menu {
+        display: block;
+        float: right;
+        width: 45px;
+        height: 45px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 6px;
+        background: #fff;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        cursor: pointer;
+    }
+
+    .mobile-menu span {
+        display: block;
+        height: 3px;
+        border-radius: 4px;
+        background-color: #999;
+        margin: 5px;
+    }
+
+    .main-header ul {
+        display: none;
+        float: right;
+    }
+
+    #mobile-menu:checked + ul {
+        display: block;
+    }
+}
+
+

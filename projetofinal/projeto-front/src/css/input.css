@@ -1,0 +1,22 @@
+/*INPUT*/
+
+.input{
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 10px;
+}
+.input-login{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 10px;
+}

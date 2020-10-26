@@ -1,0 +1,80 @@
+/*CARD*/
+
+.card-login{
+    width: 80vw;
+    position: relative;
+    top: 150px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+}
+@media (min-width: 640px) {
+    .card-login-md{
+        width: 60vw;
+    }
+}
+@media (min-width: 1080px) {
+    .card-login-lg{
+        width: 40vw;
+    }
+}
+
+.card-vagas{
+    height: 270px;
+    position: relative;
+    margin: 10px 0px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: #FFF;
+}
+
+.card-candidatos{
+    height: 270px;
+    position: relative;
+    margin: 10px 0px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: #FFF;
+}
+
+.cssdiv{
+    text-align: center;
+    padding-top: 20px;
+    height: 70px;
+    width: 100%;
+}
+
+.card-detalhes{
+    height: 350px;
+    position: relative;
+    margin: 10px 0px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: #FFF;
+}  
+.card-detalhes div{
+    height: 100%;
+}
+.card-detalhes h4{
+
+        margin: 10px;
+        text-align: left; 
+    }
+    
+    .card-detalhes button{
+        text-decoration: none;
+    
+    }
+       
+    .card-detalhes button:hover{
+        color: #007aff;
+        background: #ebf2fa;
+    
+     }

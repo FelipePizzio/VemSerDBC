@@ -1,0 +1,19 @@
+/*PÁGINA DE CADASTRO*/
+
+.borda{
+    margin: 7px;
+    height:50%;
+    margin: 10px 0px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: #FFF;
+}
+
+.titulo{
+    padding: 5px 5px;
+    background: #bebebe;
+    position: center;
+    box-sizing: border-box;
+}
